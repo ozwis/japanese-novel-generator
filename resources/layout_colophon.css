@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+/* @font-face{
+    font-family: "フォント名";
+    src: url(fonts/font-name.otf);
+} */
+
+html {
+    orphans: 1;
+    widows: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@page {
+    size: 105mm 148mm; /* A6 */
+    bleed: 3mm;
+    margin-top: 15mm;
+    margin-bottom: 10mm;
+    font-size: 7pt;
+    /* font-family: "フォント名"; */
+}
+@page :left {
+    margin-left: 15mm;
+    margin-right: 10mm;
+}
+@page :right {
+    margin-left: 10mm;
+    margin-right: 15mm;
+}
+
+html {
+    /* font-family: "フォント名"; */
+    text-align: justify;
+    line-height: 2rem;
+    column-fill: auto; /* カラムの大きさを揃えようとせず、隙間なく詰め込む. これを指定しないと, 改行時に不自然な間が空く. */
+}
+
+.page_top {
+    width: 80mm;
+    height: 49.2mm;
+    text-align: center;
+}
+
+.page_bottom {
+    width: 80mm;
+    height: 73.8mm;
+    text-align: center;
+}
+
+h1 {
+    display: inline-block;
+    width: 100%;
+    font-weight: normal;
+    font-size: 1.2rem;
+    
+}
+
+h2 {
+    display: inline-block;
+    width: 100%;
+    font-weight: normal;
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+h3 {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 0.8rem;
+    vertical-align: middle;
+}
+
+p {
+    font-weight: normal;
+    font-size: 0.5rem;
+    line-height: 1.2rem;
+}
+
+.flex_box {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.colophon_box {
+    height: 50mm;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.colophon_box .top {
+    height: 85%
+}
+
+.colophon_box .bottom {
+    height: 15%
+}
+
+.colophon_box .colophon_line {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.colophon_box .colophon_line p {
+    flex-basis: 50%;
+}
+
+.footer {
+    padding-top: 3mm;
+}
+
+.footer ul li {
+    width: auto;
+    font-weight: normal;
+    font-size: 0.5rem;
+    line-height: 1.2rem;
+    text-align: left;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    line-height: 0.75rem;
+}
+
+.page_break {
+    -webkit-column-break-after: page;
+    break-after: page;
+}
